@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'optparse'
+
+require_relative './lib/tic_tac_toe'
+require_relative './lib/arguments_parser'
+
+options = ArgumentsParser.new(ARGV).build_options
+game = TicTacToe::Game.new(user: options[:user])
+game.play
