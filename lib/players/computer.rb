@@ -17,7 +17,7 @@ module TicTacToe
 
       def turn(board)
         # return if board.winner || board.tie?
-        user_interface.thinking(self)
+        user_interface.thinking(self.name)
 
         next_move = computer_first_move(board)
         next_move ||= try_win(board)

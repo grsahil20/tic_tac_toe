@@ -1,4 +1,4 @@
-require_relative './user_iterface'
+require_relative './user_interface'
 require_relative './board'
 require_relative './players/user'
 require_relative './players/computer'

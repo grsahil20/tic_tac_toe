@@ -46,8 +46,12 @@ module TicTacToe
       gets.chomp.strip
     end
 
-    def thinking(piece)
-      puts "\nPlayer #{piece} is thinking..."
+    def thinking(name)
+      puts "\n#{name} is thinking...".green
+    end
+
+    def turn(name)
+      puts "\n#{name} ur turn ...".green
     end
 
     private

@@ -18,6 +18,8 @@ module TicTacToe
       def turn(board)
         valid_turn = false
 
+        input = user_interface.turn(name)
+
         begin
           input = user_interface.user_move
           user_interface.quit if quit_game?(input)

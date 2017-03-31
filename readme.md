@@ -1,13 +1,13 @@
 # TicTacToe
 
-TicTacToe is a computer AI which plays against a user and never .
+TicTacToe is a computer AI which plays against a user and never loose.
 
 Don't trust me try yourself.
 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine to try out game.
 
 ### Prerequisites
 
@@ -41,10 +41,15 @@ To start the game go to directory `tic_tac_toe` and exucute
 additionaly user can be given a name by passsing arguments. See
 
 ```
+./tic_tac_toe -u Sahil
+```
+
+For help use :
+
+```
 ./tic_tac_toe -h
 ```
 
-for more help.
 
 Try winning a game ;)
 
