@@ -20,6 +20,10 @@ module TicTacToe
       console_user_interface.turn(player)
     end
 
+    def quit(player)
+      console_user_interface.quit(player)
+    end
+
     def won(player)
       console_user_interface.won(player)
     end

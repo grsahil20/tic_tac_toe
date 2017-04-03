@@ -17,6 +17,10 @@ module TicTacToe
       puts "Player #{player} WINS!".green
     end
 
+    def quit(player)
+      puts "Sorry to see you go :(".blue
+    end
+
     def tie
       puts 'NONE WINS !'.yellow
     end
