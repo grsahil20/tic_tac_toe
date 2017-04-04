@@ -1,3 +1,5 @@
+require_relative './board_combination_maker'
+
 module TicTacToe
   class Board
     attr_reader :all_moves, :length
@@ -56,12 +58,14 @@ module TicTacToe
     private
 
     def winning_combinations
-      @winning_combinations ||= [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], # Horizontal
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], # Horizontal
-        [0, 4, 8], [2, 4, 6] # Diagonal wins
-      ]
+      @winning_combinations ||= BoardCombinationMaker.new(board_size: @length).run
     end
+
+    def rows_combinations
+    end
+
+
+
 
     def initialize_dup(existing_board)
       super(existing_board)
