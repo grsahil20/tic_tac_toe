@@ -33,10 +33,8 @@ module TicTacToe
 
     def winning_combination
       winning_combinations.each do |winning_combination|
-        if all_moves[winning_combination[0]] == all_moves[winning_combination[1]] &&
-          all_moves[winning_combination[1]] == all_moves[winning_combination[2]]
-          return winning_combination unless all_moves[winning_combination[0]].nil?
-        end
+        combo_elems = winning_combination.map {|i| all_moves[i] }.uniq
+        return winning_combination if combo_elems.count == 1 && !combo_elems[0].nil?
       end
       false
     end
