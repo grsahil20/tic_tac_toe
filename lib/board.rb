@@ -59,12 +59,6 @@ module TicTacToe
       @winning_combinations ||= BoardCombinationMaker.new(board_size: @length).run
     end
 
-    def rows_combinations
-    end
-
-
-
-
     def initialize_dup(existing_board)
       super(existing_board)
       @all_moves = existing_board.all_moves.dup
