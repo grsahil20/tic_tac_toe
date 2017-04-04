@@ -3,7 +3,7 @@ require_relative './base'
 module TicTacToe
   module Players
     class User < TicTacToe::Players::Base
-      attr_reader :marker, :user_interface
+      attr_reader :marker, :user_interface, :quit
 
       def initialize(name: nil, user_interface:)
         super
@@ -22,8 +22,13 @@ module TicTacToe
 
         begin
           input = user_interface.user_move
-          user_interface.quit if quit_game?(input)
-          valid_turn = validate(input, board)
+          if quit_game?(input)
+            user_interface.quit(self)
+            @quit = true
+            valid_turn = true
+          else
+            valid_turn = validate(input, board)
+          end
         end while !valid_turn
 
         board.place_marker(input.to_i, @marker)
